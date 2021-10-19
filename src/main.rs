@@ -29,9 +29,10 @@ fn main() {
 
     for command in commands.iter() {
         println!(
-            "{}. \t {} \t\t {}",
-            command.numeric_representation, command.description, command.value
+            "{}. {}",
+            command.numeric_representation, command.description
         );
+	println!("\t>>> {}\n", command.value);
     }
 
     for line in stdin.lock().lines() {
